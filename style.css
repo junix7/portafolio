@@ -1,0 +1,220 @@
+/*colors*/
+:root{
+	--violet:violet;
+	--grey:grey;
+	--teal:teal;
+	--black:black;
+}
+/*Fonts*/
+html{
+	letter-spacing: 1px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 62.5%; 
+	/* =10px */
+}
+
+/* Establece el tamaño base 
+en 10px lo que facilita 
+la conversión */
+
+body {
+  font-size: 1.6rem; 
+  /* =16px */
+  color: var(--grey);
+}
+
+h1 {
+  font-size: 3.8rem;
+  color: var(--black);
+}
+
+h2 {
+  font-size: 2.4rem; 
+  border-bottom: 1px solid violet;
+  color: var(--black);
+}
+
+h3 {
+  font-size: 2.0rem; 
+  color: var(--violet);
+}
+h4 {
+  font-size: 1.8rem; 
+  color: var(--teal);
+}
+
+/*nav-logo*/
+.nav{
+	margin: 30px;
+	padding-bottom: 100px;
+}
+
+.logo img{
+	width:	5%;
+	height: 5%;
+	float: left;
+}
+.menu{
+	float: right;
+}
+.menu a{
+	text-decoration: none;
+	color: var(--grey);
+	letter-spacing: 1px;
+	padding: 15px;
+}
+.menu a:hover{
+	color: var(--violet);
+	
+}
+
+/*header*/
+.header{
+	text-align: center;
+}
+
+.header img{
+	width: 25%;
+	height: 25%;
+	border-radius: 50%;
+	border:2px solid violet;
+}
+
+/*content*/
+.content{
+	margin: 10%;
+}
+/*about*/
+
+#about p, #about h4{
+	margin:1% 10%;
+	text-align: center;
+}
+#about h4{
+	margin: 3% 0;
+}
+/*services*/
+#services{
+	box-sizing: border-box;
+}
+.card{
+	display: flex;
+	flex-direction: reverse-column;
+	justify-content: center;
+	justify-content: space-around;
+	text-align: center;
+	border:1px solid green;
+	border-radius: 15px;
+	padding: 30px 0;
+	background-color: white;
+}
+.card li{
+	/*list-style: none;*/
+	text-align: left;
+}
+/*Projects*/
+#projects{
+	box-sizing: border-box;
+}
+.box-content{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-around;
+}
+
+.box-img img{
+	margin: 15px 0;
+	width: 250px;
+	height: 200px;
+}
+
+.text a{
+	display:none;
+}
+
+/*box img efects hover*/
+.box-img{
+	position: relative;
+}
+.image{
+    display:block;
+    width:100%;
+    height:auto;
+}
+.overlay{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height:100%;
+    width:100%;
+    opacity:0;
+    transition:.5s ease;
+    background-color:#008CBA;
+}
+.box-img:hover .overlay{
+    opacity:1;
+}
+
+.text{
+	text-align: center;
+   	color:white;
+    font-size:20px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
+}
+
+.box-img a{
+	color: var(--white);
+	text-decoration: none;
+	padding: 2px 20px;
+	border-radius: 15px;
+	border:1px solid violet;
+	display:block;
+}
+.box-img a:hover{
+	color: var(--violet);
+	text-decoration: none;
+	padding: 2px 20px;
+	background-color:white;
+	border-radius: 15px;
+	display:block;
+}
+
+/*end efects*/
+/*Pricing*/
+
+#pricing{
+	box-sizing: border-box;
+}
+
+#pricing .card {
+	border:none;
+}
+.card-content{
+	border:1px solid green;
+	border-radius: 15px;
+	margin: 0 15px;
+	padding:15px 25px 50px 25px ;
+}
+.card-content a{
+	text-decoration: none;
+	color: var(--grey);
+	border:1px solid violet;
+	border-radius: 15px;
+	padding:5px 15px;
+}
+.card-content a:hover{
+	color: white;
+	background-color: var(--violet);
+}
+/*contact*/
+/*footer*/
+.footer{
+	text-align: center;
+}
