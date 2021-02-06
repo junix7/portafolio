@@ -33,7 +33,7 @@ h2 {
 }
 h3 {
   font-size: 2.0rem; 
-  color: var(--primary);
+  color: white;
 }
 h4 {
   font-size: 1.8rem; 
@@ -107,10 +107,11 @@ h4 {
 	box-sizing: border-box;
 }
 #services .price li{
-	padding: 5px;
+	padding: 10px;
+	border: none;
 }
 #services .button{
-	padding: 3px 30px;
+	padding:8px 50px;
 }
 
 /*Projects*/
@@ -186,9 +187,6 @@ h4 {
 #pricing{
 	box-sizing: border-box;
 }
-#pricing .card {
-	border:none;
-}
 .card-pricing{
 	display: flex;
 	flex-direction: reverse-column;
@@ -201,7 +199,6 @@ h4 {
 	width: 33.3%;
   	padding: 8px;
 }
-
 .price {
   	list-style-type: none;
   	border: 1px solid #eee;
@@ -225,6 +222,7 @@ h4 {
 }
 .price .grey {
   	background-color: #eee;
+  	font-weight: bold;
 }
 .button {
   	background-color: #4CAF50;
@@ -235,6 +233,7 @@ h4 {
   	text-decoration: none;
   	opacity: 0.8;
   	transition: 0.3s;
+  	border-radius: 15px;
 }
 .button:hover{
 	opacity: 1;
@@ -267,15 +266,31 @@ input[type=submit]:hover {
 }
 .container-form {
   border-radius: 5px;
-  background-color: #f2f2f2;
   padding: 20px;
   width: 60%;
   margin-left: 20%;
 }
-.social{
-	margin-top: 20px;
+
+
+/*footer*/
+.footer{
+	padding: 100px;
+	margin:0;
 	text-align: center;
+	background-color: var(--primary);
+	color:white;
 }
+.footer img{
+	width: 10%;
+	height:auto;
+	border:2px solid white;
+	border-radius: 50%; 
+	margin-bottom: 25px;
+}
+.footer .social, .footer p{
+	margin:20px 0;
+}
+
 .fa {
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -283,17 +298,13 @@ input[type=submit]:hover {
   	font-size: 30px;
   	text-align: center;
   	text-decoration: none;
-  	border-radius: 50%;
+  	border-radius: 50px;
   	background: var(--grey);
   	color: white;
 }
 .fa:hover {
-    opacity: 0.7;
-}
-
-/*footer*/
-.footer{
-	text-align: center;
+    background-color: white;
+    color: var(--grey);
 }
 
 /*top button*/
