@@ -336,6 +336,9 @@ input[type=submit]:hover {
 	.card-content{
 		width: 80%;
 	}
+	.footer img{
+	width: 30%;
+	}
 	
   
 }
@@ -347,6 +350,7 @@ input[type=submit]:hover {
     float: right;
     display: block;
   }
+
 }
 
 /* On screens that are 600px or less, set the background color to olive */
@@ -408,6 +412,12 @@ input[type=submit]:hover {
 	.nav{
 	margin: 0;
 	padding-bottom: 0;
-}
+	}
+	.footer img{
+		width: 50%;
+	}
+	.footer h3{
+		color: white;
+	}
 	
 }
