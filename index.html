@@ -28,9 +28,11 @@
 	<!--end seo-->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet"> 
+	<script type="text/javascript" src="app.js"></script>
 
 </head>
 <body>
@@ -52,7 +54,7 @@
 		</div>
 	</div>
 	<div class="header">
-		<h1>Designer, Web Developer & Mentor</h1>
+		<h1 class="animate__animated animate__pulse animate__slower">Designer, Web Developer & Mentor</h1>
 		<p>I design and code beatifully simple things and I love what I do.</p>
 		<img src="images/avatar.png" alt="avatar">
 	</div>
@@ -62,7 +64,7 @@
 			<h4>Hi, I'm Junix, nice to meet you.</h4>
 			<p>I'm a Computer Systems Analys, proactive and creative Web Developer. I keep close eye on Front-end development, Web standars and Web performance.</p>
 			<p>I have been a Web Developer from a young age, I can design and develop WebApps using the following technologies.</p>
-			<img src="images/banner.jpg">
+			<img src="images/banner.jpg" alt="junix about">
 		</div>
 		<!--Services - Content-->
 		<div id="services">
@@ -70,7 +72,7 @@
 			<div class="card-pricing">
 				<div class="card-content">
 					<ul class="price">
-						<i class="fa fa-paint-brush fa-2x"></i>
+						<a class="fa fa-paint-brush fa-2x"></a>
 						<li class="price-h">Designer</li>
 						<li>Web,Logo,Banners.</li>
 						<li class="grey">Desing Tools</li>
@@ -80,12 +82,12 @@
 						<li>Ilustrator</li>
 						<li>Gimp</li>
 						<li>Inkscape</li>
-						<li><a href="#pricing" class="button">More</a></li>
+						
 					</ul>
 				</div>
 				<div class="card-content">
 					<ul class="price">
-						<i class="fa fa-terminal fa-2x"></i>
+						<a class="fa fa-terminal fa-2x"></a>
 						<li class="price-h">Developer</li>
 						<li>HTML,CSS,JS,PHP.</li>
 						<li class="grey">Dev Tools</li>
@@ -95,12 +97,12 @@
 						<li>Codepen</li>
 						<li>Github</li>
 						<li>Terminal</li>
-						<li><a href="#pricing" class="button">More</a></li>
+						
 					</ul>
 				</div>
 				<div class="card-content">
 					<ul class="price">
-						<i class="fa fa-book fa-2x"></i>
+						<a class="fa fa-book fa-2x"></a>
 						<li class="price-h">Mentor</li>
 						<li>WebDev, Freelancing.</li>
 						<li class="grey">Stats</li>
@@ -110,7 +112,7 @@
 						<li>+7 hours</li>
 						<li>Exercices</li>
 						<li>Live Coding</li>
-						<li><a href="#contact" class="button">More</a></li>
+						
 					</ul>
 				</div>
 				
@@ -119,8 +121,16 @@
 		<!--Projects - Content-->
 		<div id="projects">
 			<h2>Projects</h2>
+			<!-- Control buttons -->
+				<div id="myBtnContainer">
+				  <button class="btn active" onclick="filterSelection('all')"> All</button>
+				  
+				  <button class="btn" onclick="filterSelection('fullstack')"> Fullstack</button>
+				  <button class="btn" onclick="filterSelection('frontend')"> Frontend</button>
+				  <button class="btn" onclick="filterSelection('backend')"> Backend</button>
+				</div>
 			<div class="box-content">
-				<div class="box-img">
+				<div class="box-img filterDiv backend">
 					<img src="images/nyanbot.png" alt="Nyanbot" class="image">
 					<div class="overlay">
 						<div class="text">
@@ -128,7 +138,7 @@
 							<a href="https://github.com/junix7/nyanbot" target="_blank">View</a></div>
 					</div>
 				</div>
-				<div class="box-img">
+				<div class="box-img filterDiv frontend">
 					<img src="images/taskapp.png" alt="TaskApp" class="image">
 					<div class="overlay">
 						<div class="text"><p><b>TaskApp:</b></p><p>List and delete a series of tasks.</p>
@@ -136,7 +146,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="box-img">
+				<div class="box-img filterDiv frontend">
 					<img src="images/productapp.png" alt="ProductApp" class="image">
 					<div class="overlay">
 						<div class="text"><p><b>Productapp:</b></p><p> CRUD product application</p>
@@ -144,21 +154,21 @@
 						</div>
 					</div>
 				</div>
-				<div class="box-img">
+				<div class="box-img filterDiv fullstack">
 					<img src="images/hotelbuendia.png" alt="Hotel BuenDía" class="image">
 					<div class="overlay">
 						<div class="text"><p><b>Hotel BuenDía:</b></p><p> a website using HTML,CSS,PHP and MySQL.</p>
 							<a href="https://github.com/junix7/hotelbuendia" target="_blank">View</a></div>
 					</div>
 				</div>
-				<div class="box-img">
+				<div class="box-img filterDiv frontend">
 					<img src="images/ecu2002.png" alt="Ecu2002" class="image">
 					<div class="overlay">
 						<div class="text"><p><b>Ecu2002:</b></p><p> A website about Ecuador in Kore-Japan</p>
 						<a href="https://github.com/junix7/ecu2002" target="_blank">View</a></div>
 					</div>
 				</div>
-				<div class="box-img">
+				<div class="box-img filterDiv frontend">
 					<img src="images/cutenyan.png" alt="Cutenyan" class="image">
 					<div class="overlay">
 						<div class="text"><p><b>CuteNyan:</b></p><p> A simple website with HTML and CSS</p>
@@ -194,7 +204,7 @@
 						<li>Proofreading</li>
 						<li>Convert file</li>
 						<li>Extras</li>
-						<li class="grey"><a href="https://es.fiverr.com/junix7/transcribir-audios-o-videos-en-espanol?context_referrer=gig_page&source=other_gigs_by&ref_ctx_id=ce6bc28a-0884-4b14-b6e8-f40e09c552a0&pckg_id=1&pos=1&seller_online=true" class="button" target="_blank">Continue ($5)</a></li>
+						<li class="grey"><a href="https://es.fiverr.com/junix7/transcribir-audios-o-videos-en-espanol" class="button" target="_blank">Continue ($5)</a></li>
 					</ul>
 				</div>
 				<div class="card-content">
@@ -233,7 +243,7 @@
 			    <label for="subject">Subject</label>
 			    <textarea id="subject" name="message" placeholder="Write something.." style="height:200px" required></textarea>
 
-			    <input type="submit" value="Submit">
+			    <input type="submit" value="Submit" class="button">
 			  </form>
 			</div>
 
@@ -260,34 +270,30 @@
 		//Get the button
 		var mybutton = document.getElementById("myBtn");
 
-		// When the user scrolls down 20px from the top of the document, show the button
-		window.onscroll = function() {scrollFunction()};
-
-		function scrollFunction() {
-		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		    mybutton.style.display = "block";
-		  } else {
-		    mybutton.style.display = "none";
+		//filter
+		filterSelection("all")
+		function filterSelection(c) {
+		  var x, i;
+		  x = document.getElementsByClassName("filterDiv");
+		  if (c == "all") c = "";
+		  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+		  for (i = 0; i < x.length; i++) {
+		    w3RemoveClass(x[i], "show");
+		    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
 		  }
 		}
-
-		// When the user clicks on the button, scroll to the top of the document
-		function topFunction() {
-		  document.body.scrollTop = 0;
-		  document.documentElement.scrollTop = 0;
+		// Add active class to the current control button (highlight it)
+		var btnContainer = document.getElementById("myBtnContainer");
+		var btns = btnContainer.getElementsByClassName("btn");
+		for (var i = 0; i < btns.length; i++) {
+		  btns[i].addEventListener("click", function() {
+		    var current = document.getElementsByClassName("active");
+		    current[0].className = current[0].className.replace(" active", "");
+		    this.className += " active";
+		  });
 		}
 	</script>
-	<script>
-		function myFunction() {
-		  var x = document.getElementById("myTopnav");
-		  if (x.className === "menu") {
-		    x.className += " responsive";
-		  } else {
-		    x.className = "menu";
-		  }
-		}
-	</script>
-
+	
 
 </body>
 </html>

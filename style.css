@@ -1,9 +1,11 @@
 /*colors*/
 :root{
-	--primary:#008CBA;
-	--grey:grey;
-	--teal:teal;
 	--black:#1C150E;
+	--darkgrey:#666;
+	--grey:grey;
+	--purple:#A100FF;
+	--blue:#008CBA;
+	--white:#fff;
 }
 /*Fonts*/
 html{
@@ -37,7 +39,7 @@ h3 {
 }
 h4 {
   font-size: 1.8rem; 
-  color: var(--teal);
+  color: var(--black);
 }
 
 /*nav-logo*/
@@ -66,8 +68,8 @@ h4 {
   	padding: 14px 16px;
 }
 .menu a:hover{
-	color: var(--primary);
-	border-bottom: 1px solid var(--primary);
+	color: var(--blue);
+	border-bottom: 1px solid var(--blue);
 }
 .menu .icon {
   display: none;
@@ -82,7 +84,7 @@ h4 {
 	width: 25%;
 	height: 25%;
 	border-radius: 50%;
-	border:2px solid var(--primary);
+	border:2px solid var(--blue);
 }
 
 /*content*/
@@ -125,7 +127,7 @@ h4 {
 	justify-content: space-around;
 }
 .box-img img{
-	margin: 15px 0;
+	padding: 5px;
 	width: 250px;
 	height: 200px;
 }
@@ -136,7 +138,38 @@ h4 {
 /*box img efects hover*/
 .box-img{
 	position: relative;
+	overflow: hidden;
 }
+/*filtro de proyectos*/
+.filterDiv {
+  display: none; /* Hidden by default */
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+  background-color: #666;
+  color: var(--white);
+}
+
 .image{
     display:block;
     width:100%;
@@ -152,10 +185,10 @@ h4 {
     width:100%;
     opacity:0;
     transition:.5s ease;
-    background-color:#008CBA;
+    background-color:var(--darkgrey);
 }
 .box-img:hover .overlay{
-    opacity:1;
+    opacity:0.9;
 }
 .text{
 	text-align: center;
@@ -175,7 +208,7 @@ h4 {
 	display:block;
 }
 .box-img a:hover{
-	color: var(--primary);
+	color: var(--blue);
 	text-decoration: none;
 	padding: 2px 20px;
 	background-color:white;
@@ -211,7 +244,7 @@ h4 {
   	box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
 }
 .price-h {
-  	background-color: var(--primary);
+  	background-color: var(--blue);
   	color: white;
   	font-weight: bold;
 }
@@ -225,7 +258,7 @@ h4 {
   	font-weight: bold;
 }
 .button {
-  	background-color: #4CAF50;
+  	background-color:var(--purple);
   	border: none;
   	color: white;
   	padding: 10px 25px;
@@ -234,9 +267,11 @@ h4 {
   	opacity: 0.8;
   	transition: 0.3s;
   	border-radius: 15px;
+  	opacity: 0.5;
 }
 .button:hover{
 	opacity: 1;
+
 }
 
 /*contact*/
@@ -254,16 +289,9 @@ input[type=text],input[type=email], select, textarea {
   resize: vertical;
 }
 input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+
 .container-form {
   border-radius: 5px;
   padding: 20px;
@@ -277,7 +305,7 @@ input[type=submit]:hover {
 	padding: 100px;
 	margin:0;
 	text-align: center;
-	background-color: var(--primary);
+	background-color: var(--blue);
 	color:white;
 }
 .footer img{
@@ -316,14 +344,14 @@ input[type=submit]:hover {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: red;
+  background-color:var(--purple);
   color: white;
   cursor: pointer;
   padding: 15px;
   border-radius: 50%;
 }
 #myBtn:hover {
-  background-color: #555;
+  background-color: var(--grey);
 }
 /*Responsive*/
 /* On screens that are 992px or less, set the background color to blue */
@@ -339,8 +367,6 @@ input[type=submit]:hover {
 	.footer img{
 	width: 30%;
 	}
-	
-  
 }
 @media screen and (max-width: 600px) {
   .menu a:not(:first-child) {
